@@ -1,13 +1,16 @@
+<?php
+  $kategoris = App\Models\Kategori::all();
+?>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #fff">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">NF <span class="text-primary">Books</span></a>
         <div class="col-md-6 d-flex justify-content-md-end">
             <div class="nav-item shadow-sm">
                 <select class="form-select border-0" aria-label="Default select example">
-                    <option selected>Pilih Kategori</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected disabled>Pilih Kategori</option>
+                    @foreach ($kategoris as $kategori)
+                      <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>

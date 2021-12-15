@@ -45,7 +45,7 @@ class BookSeeder extends Seeder
             'lebar' => 17,
             'stok' => 13,
             'harga' => 38000,
-            'diskon' => 2,
+            'diskon' => 0,
             'thumbnail' => 'Caroline_yang_Baik_Hati.jpg',
             'penerbit_id' => 2,
             'bahasa_id' => 1,
@@ -130,6 +130,25 @@ class BookSeeder extends Seeder
             'bahasa_id' => 2,
             'kategori_id' => 5,
             'penulis_id' => 6
+        ]);
+
+        Book::create([
+            'judul' => 'Guardians Of The Galaxy Vol 1',
+            'deskripsi' => 'Will the team survive a Major blow when Vance Astro Walk out? Meanwhile, Charlie-27 fight for his life againts a Captain Universe-powered Badoon, and Starhawk makes her dramatic return-as do the heavyweight Galactic Guardian! Even with the cosmic power of Firelord, a Phoenix, a spirit of Vengeance and the thousand-year-old former Wonder man, can two teams of Guardians stop the Dread Dormammu?',
+            'jml_halaman' => 316,
+            'tgl_terbit' => '2016-05-19',
+            'ISBN' => '9781302900618',
+            'panjang' => 22,
+            'berat' => 0.49,
+            'lebar' => 17,
+            'stok' => 6,
+            'harga' => 559000,
+            'diskon' => 20,
+            'thumbnail' => 'Guardians-Of-The-Galaxy-Vol-1.jpg',
+            'penerbit_id' => 2,
+            'bahasa_id' => 1,
+            'kategori_id' => 5,
+            'penulis_id' => 7
         ]);
     }
 }

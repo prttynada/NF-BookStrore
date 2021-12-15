@@ -286,20 +286,29 @@
         </div>
 
         <div class="row row-cols-md-6 row-cols-sm-4 row-cols-2 g-4 rounded shadow-sm bg-white">
+          @foreach ($latests as $latest)
+            <?php
+              $diskon = $latest->harga-$latest->harga*$latest->diskon/100
+            ?>
             <div class="col my-2">
               <div class="card shadow-sm bg-light">
                 <a href="#">
-                    <img src="/book/jjp.jpg" class="card-img-top" alt="...">
+                    <img src="/book/{{ $latest->thumbnail }}" height="237px" class="card-img-top" alt="{{ $latest->judul }}">
                 </a>
                 <div class="card-body p-2 d-flex flex-column justify-content-between">
-                  <h6 class="card-title fw-bold" style="font-size: 14px">Jangan Jadi Pecundang</h6>
+                  <a href="#" class="text-decoration-none text-dark">
+                    <h6 class="card-title fw-bold" style="font-size: 14px">{{ $latest->judul }}</h6>
+                  </a>
                   <div class="d-flex flex-column flex-lg-row justify-content-between">
-                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp.65.000</s></small>
-                    <small class="card-text fw-bold" style="font-size: 12px">Rp.64.500</small>
+                    @if ($diskon != $latest->harga)
+                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp. {{ number_format($latest->harga,0,',','.') }}</s></small>
+                    @endif
+                    <small class="card-text fw-bold" style="font-size: 12px">Rp. {{ number_format($diskon,0,',','.') }}</small>
                   </div>
                 </div>
               </div>
             </div>
+          @endforeach
         </div>
 
     </div>
@@ -313,20 +322,29 @@
         </div>
 
         <div class="row row-cols-md-6 row-cols-sm-4 row-cols-2 g-4 rounded shadow-sm bg-white">
+          @foreach ($latests as $latest)
+            <?php
+              $diskon = $latest->harga-$latest->harga*$latest->diskon/100
+            ?>
             <div class="col my-2">
-              <div class="card  shadow-sm bg-light">
+              <div class="card shadow-sm bg-light">
                 <a href="#">
-                    <img src="/book/jjp.jpg" class="card-img-top" alt="...">
+                    <img src="/book/{{ $latest->thumbnail }}" height="237px" class="card-img-top" alt="{{ $latest->judul }}">
                 </a>
                 <div class="card-body p-2 d-flex flex-column justify-content-between">
-                  <h6 class="card-title fw-bold" style="font-size: 14px">Jangan Jadi Pecundang</h6>
+                  <a href="#" class="text-decoration-none text-dark">
+                    <h6 class="card-title fw-bold" style="font-size: 14px">{{ $latest->judul }}</h6>
+                  </a>
                   <div class="d-flex flex-column flex-lg-row justify-content-between">
-                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp.65.000</s></small>
-                    <small class="card-text fw-bold" style="font-size: 12px">Rp.64.500</small>
+                    @if ($diskon != $latest->harga)
+                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp. {{ number_format($latest->harga,0,',','.') }}</s></small>
+                    @endif
+                    <small class="card-text fw-bold" style="font-size: 12px">Rp. {{ number_format($diskon,0,',','.') }}</small>
                   </div>
                 </div>
               </div>
             </div>
+          @endforeach
         </div>
     </div>
 
@@ -339,20 +357,29 @@
         </div>
 
         <div class="row row-cols-md-6 row-cols-sm-4 row-cols-2 g-4 rounded shadow-sm bg-white">
+          @foreach ($latests as $latest)
+            <?php
+              $diskon = $latest->harga-$latest->harga*$latest->diskon/100
+            ?>
             <div class="col my-2">
               <div class="card shadow-sm bg-light">
                 <a href="#">
-                    <img src="/book/jjp.jpg" class="card-img-top" alt="...">
+                    <img src="/book/{{ $latest->thumbnail }}" height="237px" class="card-img-top" alt="{{ $latest->judul }}">
                 </a>
                 <div class="card-body p-2 d-flex flex-column justify-content-between">
-                  <h6 class="card-title fw-bold" style="font-size: 14px">Jangan Jadi Pecundang</h6>
+                  <a href="#" class="text-decoration-none text-dark">
+                    <h6 class="card-title fw-bold" style="font-size: 14px">{{ $latest->judul }}</h6>
+                  </a>
                   <div class="d-flex flex-column flex-lg-row justify-content-between">
-                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp.65.000</s></small>
-                    <small class="card-text fw-bold" style="font-size: 12px">Rp.64.500</small>
+                    @if ($diskon != $latest->harga)
+                    <small class="card-text text-muted" style="font-size: 11px"><s>Rp. {{ number_format($latest->harga,0,',','.') }}</s></small>
+                    @endif
+                    <small class="card-text fw-bold" style="font-size: 12px">Rp. {{ number_format($diskon,0,',','.') }}</small>
                   </div>
                 </div>
               </div>
             </div>
+          @endforeach
         </div>
 
     </div>
