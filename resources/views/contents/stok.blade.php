@@ -85,7 +85,7 @@
             </div>
         </div>
         <div class="col-md-4 m-3" style="padding:0">
-            <div class="row-md" style="margin-top:94px"></div>
+            <div class="row-md" style="margin-top:55pt"></div>
             <div class="row-md-4 p-3 my-3 border rounded" style="background-color:white">
                 <h6 class="title">Upload Foto Produk<h6>
                 <div class="form-check" style="margin-top:20px">
@@ -136,6 +136,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="bg-light d-flex justify-content-center p-2">
+        <small>&copy; 2021 RPL Sprint</small>
     </div>
     
 @endsection
