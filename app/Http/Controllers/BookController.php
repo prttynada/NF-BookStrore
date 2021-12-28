@@ -13,8 +13,8 @@ class BookController extends Controller
         $kategori = Kategori::all();
         $latests = DB::table('books')->limit(6)->get();
 
-        return view('contents.home', [
-            'title' => 'Home',
+        return view('contents.stok', [
+            'title' => 'Stok',
             'kategori' => $kategori,
             'latests' => $latests
         ]);
